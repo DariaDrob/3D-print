@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>3D Family print</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-roboto">
+
+<header class="header relative">
+    <img src="3dfamily-backend/public/images/image1.png" alt="Логотип 3DPrint" class="logo">
+    <nav class="navigation">
+        <a href="#services">Послуги</a>
+        <a href="#about">Про нас</a>
+        <a href="#projects">Проекти</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
+
+<main class="logo-form">
+    <div class="image-main">
+        <img src="3dfamily-backend/public/images/image2.png" alt="Main photo">
+    </div>
+    <div>
+        <h1>3D Family print</h1>
+    </div>
+
+
+    <section class="consultation">
+        <h2>Ваші дані для безкоштовної <br>консультації і розрахунку вартості за 30 хвилин:</h2>
+        <form id="consultForm" class="consultation-form">
+            <input type="text" name="phone" placeholder="Номер телефона" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="description" placeholder="Опис, що б хотіли виконати" rows="4" required></textarea>
+            <button type="submit">Отримати консультацію</button>
+        </form>
+        <div class="success-message" id="successMsg">
+            Заявка відправлена!<br>
+            <span style="font-size:20px; margin-top:10px; display:block;">Очікуйте дзвінка найближчим часом</span>
+        </div>
+    </section>
+
+
+    <section id="services" class="services-section">
+        <h2 class="main-text-services">Повний спектр послуг</h2>
+        <div class="max-w-7xl mx-auto py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="review-card text-center">
+                <img src="3dfamily-backend/public/images/services1.png" alt="3D Print" class="services-icon">
+                <p class="text-xl font-bold text-orange-500 mt-4">3D Друк</p>
+                <p class="text-gray-300 text-sm mt-2">Друкуємо деталі будь-якої складності швидко та якісно.</p>
+            </div>
+            <div class="review-card text-center">
+                <img src="3dfamily-backend/public/images/services2.jpg" alt="3D Modeling" class="services-icon">
+                <p class="text-xl font-bold text-orange-500 mt-4">Моделювання</p>
+                <p class="text-gray-300 text-sm mt-2">Створюємо 3D-моделі будь-якої складності.</p>
+            </div>
+            <div class="review-card text-center">
+                <img src="3dfamily-backend/public/images/services3.jpg" alt="Фарбування" class="services-icon">
+                <p class="text-xl font-bold text-orange-500 mt-4">Фарбування</p>
+                <p class="text-gray-300 text-sm mt-2">Професійне розфарбування моделей за вашим бажанням.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-us">
+        <div>
+            <h1><span class="orange-line">Про нас</span></h1>
+            <h2>Ми — невелике сімейне виробництво з великими амбіціями.<br>Працюємо з 2022 року та за цей час<br> здобули довіру багатьох клієнтів.</h2>
+            <h2>Прагнемо бути 3D-студією,<br> на яку можна покластися у будь-якій задачі. <br>Завдяки професіоналізму та інноваціям створюємо <br>якісні прототипи та унікальні вироби.</h2>
+            <h2>Для нас важлива кожна деталь — працюємо так, ніби робимо для себе.</h2>
+        </div>
+        <div class="about-slider">
+            <div class="slider-container">
+                <img src="3dfamily-backend/public/images/slider1.jpg" alt="Наші роботи" class="slider-img active">
+                <img src="3dfamily-backend/public/images/slider2.jpg" alt="Наші роботи" class="slider-img">
+                <img src="3dfamily-backend/public/images/slider3.jpg" alt="Наші роботи" class="slider-img">
+                <img src="3dfamily-backend/public/images/slider4.jpg" alt="Наші роботи" class="slider-img">
+                <img src="3dfamily-backend/public/images/slider5.jpg" alt="Наші роботи" class="slider-img">
+            </div>
+        </div>
+    </section>
+
+    <section  class="projects-section">
+        <h2 id="projects" class="projects-title">Наші проєкти</h2>
+        <div id="product-list" class="projects-grid px-10"></div>
+    </section>
+</main>
+
+<script src="js/slider.js"></script>
+<script src="js/script.js"></script>
+
+<div id="contactModal" class="fixed inset-0 z-50 hidden items-start justify-center pt-20 px-4">
+    <div class="fixed inset-0 bg-black/70" id="modalBg"></div>
+    <div class="relative bg-gradient-to-b from-[#1c143f] to-[#110c2f] rounded-3xl p- p-10 max-w-lg w-full shadow-2xl border border-orange-500/50">
+        <button id="closeModal" class="absolute top-4 right-6 text-4xl text-gray-400 hover:text-white">×</button>
+
+        <h2 class="text-4xl font-bold text-center text-white mb-8">Зв'яжіться з нами</h2>
+
+        <div class="space-y-8 text-center">
+            <div>
+                <p class="text-gray-400 text-lg mb-3">Телефон</p>
+                <a href="tel:+19999999999" class="text-3xl font-bold text-orange-400 hover:text-orange-300 block transition">
+                    +1 999 999 99 99
+                </a>
+            </div>
+
+            <div>
+                <p class="text-gray-400 text-lg mb-4">Або напишіть у Telegram:</p>
+                <a href="https://t.me/av_atar" target="_blank"
+                   class="inline-flex items-center gap-4 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xl px-10 py-5 rounded-2xl transition transform hover:scale-105 shadow-lg">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.2 18.23c-.16.16-.36.24-.6.24-.32 0-.6-.16-.92-.44l-3.8-2.56-2.04 1.88c-.24.2-.48.12-.56-.16l-.76-3.76-3.24-1.04c-.36-.12-.36-.56 0-.72l12.92-4.96c.4-.16.76.24.6.64l-2.04 8.56z"/>
+                    </svg>
+                    Написати в Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,13 +1,13 @@
 {
   "dependencies": {
+    "@nestjs/cli": "^11.0.14",
     "multer": "^2.0.2",
     "sharp": "^0.34.5"
   },
   "scripts": {
+    "start": "nest start --watch",
     "build": "nest build",
-    "start": "node dist/main.js",
     "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main.js"
   }
 }

@@ -7,12 +7,11 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors();
 
+  app.useStaticAssets(join(__dirname, '..', 'public'));
 
-  app.useStaticAssets(join(__dirname, '..', 'public'), {
-    prefix: '/',
-    setHeaders: (res, path) => {
-      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    },
+
+  app.use('/', (req, res) => {
+    res.sendFile(join(__dirname, '..', 'public', 'index.html'));
   });
 
   await app.listen(process.env.PORT || 3000);

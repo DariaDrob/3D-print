@@ -419,52 +419,176 @@ border-radius: 50%;
         height: 300px;
     }
 
-    /* Модалка контактов на мобильных */
-    #contactModal .relative {
-        margin: 20px;
-        padding: 30px 20px;
+    /* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
+
+    @media (max-width: 1024px) {
+        .header {
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .header .navigation {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .image-main {
+            height: 600px !important;
+        }
+
+        .consultation {
+            position: static;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 30px 20px;
+        }
+
+        .consultation h2 {
+            font-size: 20px;
+        }
+
+        .logo-form h1 {
+            margin-left: 0;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .about-us {
+            flex-direction: column;
+            gap: 40px;
+            padding: 80px 20px !important;
+            margin-top: 100px !important;
+        }
+
+        .about-us h1, .about-us h2 {
+            margin-left: 0;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .about-us h2 {
+            font-size: 20px;
+        }
+
+        .orange-line {
+            margin: 0 auto;
+        }
+
+        .about-slider {
+            margin-left: 0;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .slider-container {
+            margin-left: 0;
+            height: 400px;
+        }
+
+        .slider-container img {
+            width: 100% !important;
+            height: 400px !important;
+        }
+
+        .services-section {
+            top: 0;
+            padding: 60px 20px;
+        }
+
+        .review-card {
+            height: auto;
+        }
+
+        .review-card img {
+            height: 300px;
+        }
+
+        .projects-section {
+            padding: 100px 20px 60px !important;
+        }
+
+        .projects-title {
+            font-size: 32px;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        #product-list img {
+            height: 300px;
+        }
+
+
+        #contactModal .relative {
+            margin: 20px;
+            padding: 30px 20px;
+        }
+
+        #contactModal h2 {
+            font-size: 32px;
+        }
+
+        #contactModal a[href^="tel"] {
+            font-size: 28px;
+        }
+
+        #contactModal .inline-flex {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
     }
 
-    #contactModal h2 {
-        font-size: 32px;
-    }
+    @media (max-width: 640px) {
+        .header {
+            padding: 15px;
+        }
 
-    #contactModal a[href^="tel"] {
-        font-size: 28px;
-    }
+        .logo-form h1 {
+            font-size: 28px;
+        }
 
-    #contactModal .inline-flex {
-        padding: 15px 30px;
-        font-size: 18px;
-    }
-}
+        .consultation h2 {
+            font-size: 18px;
+        }
 
-@media (max-width: 640px) {
-    .header {
-        padding: 15px;
-    }
+        .projects-title {
+            font-size: 28px;
+        }
 
-    .logo-form h1 {
-        font-size: 28px;
-    }
+        .review-card img {
+            height: 250px;
+        }
 
-    .consultation h2 {
-        font-size: 18px;
-    }
+        #product-list img {
+            height: 250px;
+        }
 
-    .projects-title {
-        font-size: 28px;
-    }
+        .slider-container img {
+            height: 300px !important;
+        }
 
-    .review-card img {
-        height: 250px;
-    }
+        .image-main {
+            height: 500px !important;
+        }
 
-    #product-list img {
-        height: 250px;
-    }
+        .about-us {
+            padding: 60px 15px !important;
+            margin-top: 80px !important;
+        }
 
-    .slider-container img {
-        height: 300px !important;
-    }
-}
+        .projects-section {
+            padding: 80px 15px 60px !important;
+        }
+    }}

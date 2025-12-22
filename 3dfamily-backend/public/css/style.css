@@ -420,7 +420,6 @@ border-radius: 50%;
     }
 
     /* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
-
     @media (max-width: 1024px) {
         .header {
             flex-direction: column;
@@ -440,33 +439,48 @@ border-radius: 50%;
             height: 100px;
         }
 
-
+        /* Главная картинка — большая на мобильных */
         .image-main {
-            height: 600px !important;
+            height: 800px !important; /* в 6 раз больше оригинала */
+            width: 100%;
+            object-fit: cover;
         }
 
+        /* Форма на картинке — правильно позиционируется */
         .consultation {
-            position: static;
+            position: absolute;
+            top: 200px; /* от верха картинки */
+            left: 50%;
+            transform: translateX(-50%);
             max-width: 90%;
-            margin: 40px auto;
+            width: 400px;
             padding: 30px 20px;
+            background: rgba(17, 12, 47, 0.8); /* полупрозрачный фон, как было */
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            z-index: 10;
         }
 
         .consultation h2 {
-            font-size: 20px;
+            font-size: 22px;
+            text-align: center;
         }
 
         .logo-form h1 {
             margin-left: 0;
             font-size: 36px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
+        /* Блок "Про нас" — большой отступ сверху, чтобы не накладывался */
         .about-us {
             flex-direction: column;
             gap: 40px;
-            padding: 80px 20px !important;
-            margin-top: 100px !important;
+            padding: 120px 20px 80px !important; /* большой padding-top */
+            margin-top: 0 !important;
+            position: relative;
+            z-index: 5;
         }
 
         .about-us h1, .about-us h2 {
@@ -480,7 +494,7 @@ border-radius: 50%;
         }
 
         .orange-line {
-            margin: 0 auto;
+            margin: 20px auto;
         }
 
         .about-slider {
@@ -500,20 +514,17 @@ border-radius: 50%;
         }
 
         .services-section {
-            top: 0;
-            padding: 60px 20px;
-        }
-
-        .review-card {
-            height: auto;
+            padding: 80px 20px;
         }
 
         .review-card img {
             height: 300px;
         }
 
+        /* Секция проектов — большой отступ сверху от слайдера */
         .projects-section {
-            padding: 100px 20px 60px !important;
+            padding: 140px 20px 80px !important; /* большой padding-top, чтобы не накладывался на слайдер */
+            margin-top: 0;
         }
 
         .projects-title {
@@ -522,73 +533,52 @@ border-radius: 50%;
 
         .projects-grid {
             grid-template-columns: 1fr;
-            gap: 30px;
-            padding: 20px;
+            gap: 40px;
         }
 
         #product-list img {
-            height: 300px;
+            height: 350px;
+            object-fit: cover;
         }
 
-
+        /* Модалка */
         #contactModal .relative {
             margin: 20px;
-            padding: 30px 20px;
-        }
-
-        #contactModal h2 {
-            font-size: 32px;
-        }
-
-        #contactModal a[href^="tel"] {
-            font-size: 28px;
-        }
-
-        #contactModal .inline-flex {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 40px 20px;
         }
     }
 
     @media (max-width: 640px) {
-        .header {
-            padding: 15px;
+        .image-main {
+            height: 600px !important; /* чуть меньше на маленьких экранах */
         }
 
-        .logo-form h1 {
-            font-size: 28px;
+        .consultation {
+            top: 150px;
+            padding: 25px 15px;
         }
 
         .consultation h2 {
             font-size: 18px;
         }
 
-        .projects-title {
+        .logo-form h1 {
             font-size: 28px;
         }
 
-        .review-card img {
-            height: 250px;
+        .about-us {
+            padding: 100px 15px 60px !important;
+        }
+
+        .projects-section {
+            padding: 120px 15px 60px !important;
         }
 
         #product-list img {
-            height: 250px;
+            height: 280px;
         }
 
         .slider-container img {
             height: 300px !important;
-        }
-
-        .image-main {
-            height: 500px !important;
-        }
-
-        .about-us {
-            padding: 60px 15px !important;
-            margin-top: 80px !important;
-        }
-
-        .projects-section {
-            padding: 80px 15px 60px !important;
         }
     }}

@@ -439,30 +439,26 @@ border-radius: 50%;
             height: 100px;
         }
 
-        /* Главная картинка — большая на мобильных */
+
         .image-main {
-            height: 800px !important; /* в 6 раз больше оригинала */
+            height: 700px !important;
             width: 100%;
             object-fit: cover;
         }
 
-        /* Форма на картинке — правильно позиционируется */
+
         .consultation {
-            position: absolute;
-            top: 200px; /* от верха картинки */
-            left: 50%;
-            transform: translateX(-50%);
+            position: static;
             max-width: 90%;
-            width: 400px;
-            padding: 30px 20px;
-            background: rgba(17, 12, 47, 0.8); /* полупрозрачный фон, как было */
-            backdrop-filter: blur(10px);
+            margin: 80px auto 60px;
+            padding: 40px 20px;
+            background: rgba(28, 20, 63, 0.95);
             border-radius: 20px;
-            z-index: 10;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
         }
 
         .consultation h2 {
-            font-size: 22px;
+            font-size: 24px;
             text-align: center;
         }
 
@@ -470,17 +466,14 @@ border-radius: 50%;
             margin-left: 0;
             font-size: 36px;
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        /* Блок "Про нас" — большой отступ сверху, чтобы не накладывался */
+
         .about-us {
             flex-direction: column;
-            gap: 40px;
-            padding: 120px 20px 80px !important; /* большой padding-top */
+            gap: 50px;
+            padding: 100px 20px 80px !important;
             margin-top: 0 !important;
-            position: relative;
-            z-index: 5;
         }
 
         .about-us h1, .about-us h2 {
@@ -505,26 +498,22 @@ border-radius: 50%;
 
         .slider-container {
             margin-left: 0;
-            height: 400px;
+            height: 500px;
         }
 
         .slider-container img {
             width: 100% !important;
-            height: 400px !important;
+            height: 500px !important;
+            object-fit: cover;
         }
 
         .services-section {
             padding: 80px 20px;
         }
 
-        .review-card img {
-            height: 300px;
-        }
 
-        /* Секция проектов — большой отступ сверху от слайдера */
         .projects-section {
-            padding: 140px 20px 80px !important; /* большой padding-top, чтобы не накладывался на слайдер */
-            margin-top: 0;
+            padding: 180px 20px 80px !important;
         }
 
         .projects-title {
@@ -533,33 +522,27 @@ border-radius: 50%;
 
         .projects-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 50px;
         }
 
         #product-list img {
             height: 350px;
             object-fit: cover;
         }
-
-        /* Модалка */
-        #contactModal .relative {
-            margin: 20px;
-            padding: 40px 20px;
-        }
     }
 
     @media (max-width: 640px) {
         .image-main {
-            height: 600px !important; /* чуть меньше на маленьких экранах */
+            height: 550px !important;
         }
 
         .consultation {
-            top: 150px;
-            padding: 25px 15px;
+            margin: 60px auto 40px;
+            padding: 30px 15px;
         }
 
         .consultation h2 {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .logo-form h1 {
@@ -567,18 +550,22 @@ border-radius: 50%;
         }
 
         .about-us {
-            padding: 100px 15px 60px !important;
+            padding: 80px 15px 60px !important;
+        }
+
+        .slider-container {
+            height: 400px;
+        }
+
+        .slider-container img {
+            height: 400px !important;
         }
 
         .projects-section {
-            padding: 120px 15px 60px !important;
+            padding: 150px 15px 60px !important;
         }
 
         #product-list img {
             height: 280px;
-        }
-
-        .slider-container img {
-            height: 300px !important;
         }
     }}

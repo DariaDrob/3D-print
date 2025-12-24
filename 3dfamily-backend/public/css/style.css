@@ -318,13 +318,15 @@ border-radius: 50%;
     .header {
         flex-direction: column;
     }
-
+    body {
+        overflow-x: hidden;
+    }
     /* Главная картинка — большая */
     .image-main {
         height: 800px !important;
         width: 100%;
         object-fit: cover;
-        position: relative; /* для absolute формы */
+        position: relative;
     }
 
     /* Форма — НА картинке, центр, меньше размер */
@@ -419,9 +421,11 @@ border-radius: 50%;
     .header {
         padding: 15px;
     }
-
+    body {
+        overflow-x: hidden;
+    }
     .image-main {
-        height: 500px !important;
+        height: 800px !important;
     }
 
     .logo-form h1 {

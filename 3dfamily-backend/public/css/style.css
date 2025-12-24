@@ -339,33 +339,38 @@ border-radius: 50%;
         object-fit: cover;
     }
 
-
+    /* Форма — блок точно по размеру формы (нет большого фона) */
     .consultation {
         position: static;
         max-width: 90%;
-        width: 280px;
         margin: 80px auto 60px;
-        padding: 20px 15px;
-        background: rgba(28, 20, 63, 0.95);
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+        padding: 20px 15px; /* маленький padding */
+        background: none; /* убрали фон — теперь только поля */
+        box-shadow: none;
     }
 
     .consultation h2 {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
         margin-bottom: 15px;
     }
 
+    .consultation-form {
+        background: rgba(28, 20, 63, 0.9); /* фон только на форму */
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+    }
+
     .consultation-form input, .consultation-form textarea {
-        padding: 8px;
-        font-size: 14px;
-        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 15px;
+        margin-bottom: 12px;
     }
 
     .consultation-form button {
-        padding: 10px;
-        font-size: 16px;
+        padding: 12px;
+        font-size: 17px;
     }
 
     .logo-form h1 {
@@ -374,10 +379,10 @@ border-radius: 50%;
         text-align: center;
     }
 
-
+    /* "Про нас" — текст полностью, слайдер после него с отступом */
     .about-us {
         flex-direction: column;
-        gap: 40px;
+        gap: 60px; /* большой отступ между текстом и слайдером */
         padding: 100px 20px 80px !important;
         margin-top: 0 !important;
     }
@@ -390,10 +395,11 @@ border-radius: 50%;
 
     .about-us h2 {
         font-size: 18px;
+        margin-bottom: 20px;
     }
 
     .orange-line {
-        margin: 15px auto;
+        margin: 20px auto;
     }
 
     .about-slider {
@@ -413,9 +419,9 @@ border-radius: 50%;
         object-fit: cover;
     }
 
-
+    /* "Наші проєкти" — большой отступ после слайдера */
     .projects-section {
-        padding: 200px 20px 80px !important;
+        padding: 200px 20px 80px !important; /* 200px сверху от слайдера */
     }
 
     .projects-title {
@@ -439,23 +445,26 @@ border-radius: 50%;
     }
 
     .consultation {
-        width: 260px;
         margin: 60px auto 40px;
         padding: 15px 10px;
     }
 
     .consultation h2 {
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    .consultation-form {
+        padding: 15px;
     }
 
     .consultation-form input, .consultation-form textarea {
-        font-size: 13px;
-        padding: 7px;
+        font-size: 14px;
+        padding: 8px;
     }
 
     .consultation-form button {
-        font-size: 15px;
-        padding: 9px;
+        font-size: 16px;
+        padding: 10px;
     }
 
     .logo-form h1 {
@@ -464,6 +473,7 @@ border-radius: 50%;
 
     .about-us {
         padding: 80px 15px 60px !important;
+        gap: 50px;
     }
 
     .slider-container {

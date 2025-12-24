@@ -317,178 +317,145 @@ border-radius: 50%;
 @media (max-width: 1024px) {
     .header {
         flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 20px;
     }
 
-    .header .navigation {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .logo {
-        width: 100px;
-        height: 100px;
-    }
-
+    /* Главная картинка — большая */
     .image-main {
-        height: 700px !important;
+        height: 800px !important;
         width: 100%;
         object-fit: cover;
+        position: relative; /* для absolute формы */
     }
 
-    /* Форма — блок точно по размеру формы (нет большого фона) */
+    /* Форма — НА картинке, центр, меньше размер */
     .consultation {
-        position: static;
+        position: absolute;
+        top: 50%; /* центр по вертикали */
+        left: 50%;
+        transform: translate(-50%, -50%); /* точный центр */
         max-width: 90%;
-        margin: 80px auto 60px;
-        padding: 20px 15px; /* маленький padding */
-        background: none; /* убрали фон — теперь только поля */
-        box-shadow: none;
+        width: 380px;
+        padding: 30px 20px;
+        background: rgba(28, 20, 63, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(255, 102, 0, 0.5);
+        z-index: 10;
     }
 
     .consultation h2 {
-        font-size: 20px;
+        font-size: 22px;
         text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .consultation-form {
-        background: rgba(28, 20, 63, 0.9); /* фон только на форму */
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
-    }
-
-    .consultation-form input, .consultation-form textarea {
-        padding: 10px;
-        font-size: 15px;
-        margin-bottom: 12px;
-    }
-
-    .consultation-form button {
-        padding: 12px;
-        font-size: 17px;
     }
 
     .logo-form h1 {
         margin-left: 0;
         font-size: 36px;
         text-align: center;
+        margin-bottom: 20px;
     }
 
-    /* "Про нас" — текст полностью, слайдер после него с отступом */
     .about-us {
         flex-direction: column;
-        gap: 60px; /* большой отступ между текстом и слайдером */
-        padding: 100px 20px 80px !important;
-        margin-top: 0 !important;
-    }
-
-    .about-us h1, .about-us h2 {
-        margin-left: 0;
-        text-align: center;
-        font-size: 32px;
-    }
-
-    .about-us h2 {
-        font-size: 18px;
-        margin-bottom: 20px;
+        gap: 100px;
+        padding: 220px 20px 80px !important;
+        position: relative;
+        z-index: 5;
     }
 
     .orange-line {
         margin: 20px auto;
     }
 
-    .about-slider {
-        margin-left: 0;
-        width: 100% !important;
-        height: auto !important;
+    .services-section {
+        top: 0;
+        padding: 60px 20px;
     }
 
-    .slider-container {
-        margin-left: 0;
-        height: 450px;
+    .review-card {
+        height: auto;
+        padding: 80px 20px;
     }
 
-    .slider-container img {
-        width: 100% !important;
-        height: 450px !important;
-        object-fit: cover;
+    .review-card img {
+        height: 300px;
     }
 
-    /* "Наші проєкти" — большой отступ после слайдера */
     .projects-section {
-        padding: 200px 20px 80px !important; /* 200px сверху от слайдера */
-    }
-
-    .projects-title {
-        font-size: 30px;
+        padding: 140px 20px 80px !important;
+        margin-top: 0;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 20px;
     }
 
     #product-list img {
-        height: 320px;
+        height: 350px;
         object-fit: cover;
+    }
+
+    #contactModal .relative {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+
+    #contactModal h2 {
+        font-size: 32px;
+    }
+
+    #contactModal a[href^="tel"] {
+        font-size: 28px;
+    }
+
+    #contactModal .inline-flex {
+        padding: 40px 20px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 640px) {
-    .image-main {
-        height: 550px !important;
-    }
-
-    .consultation {
-        margin: 60px auto 40px;
-        padding: 15px 10px;
-    }
-
-    .consultation h2 {
-        font-size: 18px;
-    }
-
-    .consultation-form {
+    .header {
         padding: 15px;
     }
 
-    .consultation-form input, .consultation-form textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .consultation-form button {
-        font-size: 16px;
-        padding: 10px;
+    .image-main {
+        height: 500px !important;
     }
 
     .logo-form h1 {
         font-size: 28px;
     }
 
+    .consultation {
+        width: 320px;
+        padding: 25px 15px;
+        top: 55%;
+    }
+
+    .consultation h2 {
+        font-size: 18px;
+    }
+
+    .review-card img {
+        height: 250px;
+    }
+
     .about-us {
-        padding: 80px 15px 60px !important;
-        gap: 50px;
-    }
-
-    .slider-container {
-        height: 380px;
-    }
-
-    .slider-container img {
-        height: 380px !important;
+        padding: 60px 15px !important;
+        margin-top: 80px !important;
     }
 
     .projects-section {
-        padding: 160px 15px 60px !important;
+        padding: 80px 15px 60px !important;
     }
 
     #product-list img {
-        height: 260px;
+        height: 280px;
+    }
+
+    .slider-container img {
+        height: 300px !important;
     }
 }

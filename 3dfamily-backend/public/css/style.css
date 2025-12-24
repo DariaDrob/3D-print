@@ -191,10 +191,9 @@ border-radius: 50%;
 .slider-container img.active {
     opacity: 1 !important;
 }
-/*ТЕСТ*/
 
 .page {
-    display: none; /* важно для твоей функции showPage */
+    display: none;
 }
 
 .projects-section {
@@ -266,7 +265,7 @@ border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
 }
 
-/* Плейсхолдеры — светло-серые, чтобы не сливались */
+
 .consultation-form input::placeholder,
 .consultation-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.6) !important;
@@ -286,14 +285,14 @@ border-radius: 50%;
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     z-index: 9999;
     opacity: 0;
-    visibility: hidden;           /* добавили это */
+    visibility: hidden;
     pointer-events: none;
     transition: all 0.6s ease;
 }
 
 .success-message.show {
     opacity: 1;
-    visibility: visible;           /* и это */
+    visibility: visible;
 }
 
 .projects-grid {
@@ -305,7 +304,7 @@ border-radius: 50%;
     margin: 0 auto;
 }
 
-/* Единая высота фото в карточках */
+
 #product-list img {
     width: 100%;
     height: 380px;
@@ -334,38 +333,39 @@ border-radius: 50%;
         height: 100px;
     }
 
-    /* Главная картинка — большая */
     .image-main {
         height: 700px !important;
         width: 100%;
         object-fit: cover;
     }
 
-    /* Форма — под картинкой, меньше в 2 раза */
+
     .consultation {
         position: static;
         max-width: 90%;
-        width: 350px; /* меньше в 2 раза */
+        width: 280px;
         margin: 80px auto 60px;
-        padding: 30px 15px; /* меньше отступы внутри */
+        padding: 20px 15px;
         background: rgba(28, 20, 63, 0.95);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
     }
 
     .consultation h2 {
-        font-size: 22px;
+        font-size: 18px;
         text-align: center;
+        margin-bottom: 15px;
     }
 
     .consultation-form input, .consultation-form textarea {
-        padding: 10px;
-        font-size: 16px;
+        padding: 8px;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .consultation-form button {
-        padding: 12px;
-        font-size: 18px;
+        padding: 10px;
+        font-size: 16px;
     }
 
     .logo-form h1 {
@@ -374,10 +374,10 @@ border-radius: 50%;
         text-align: center;
     }
 
-    /* "Про нас" — слайдер ПЕРЕД текстом */
+
     .about-us {
-        flex-direction: column-reverse; /* слайдер сверху, текст снизу */
-        gap: 50px;
+        flex-direction: column;
+        gap: 40px;
         padding: 100px 20px 80px !important;
         margin-top: 0 !important;
     }
@@ -385,15 +385,15 @@ border-radius: 50%;
     .about-us h1, .about-us h2 {
         margin-left: 0;
         text-align: center;
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .about-us h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .orange-line {
-        margin: 20px auto;
+        margin: 15px auto;
     }
 
     .about-slider {
@@ -404,30 +404,31 @@ border-radius: 50%;
 
     .slider-container {
         margin-left: 0;
-        height: 500px;
+        height: 450px;
     }
 
     .slider-container img {
         width: 100% !important;
-        height: 500px !important;
+        height: 450px !important;
         object-fit: cover;
     }
 
+
     .projects-section {
-        padding: 180px 20px 80px !important;
+        padding: 200px 20px 80px !important;
     }
 
     .projects-title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
     }
 
     #product-list img {
-        height: 350px;
+        height: 320px;
         object-fit: cover;
     }
 }
@@ -438,13 +439,23 @@ border-radius: 50%;
     }
 
     .consultation {
-        width: 300px;
+        width: 260px;
         margin: 60px auto 40px;
-        padding: 25px 15px;
+        padding: 15px 10px;
     }
 
     .consultation h2 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .consultation-form input, .consultation-form textarea {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .consultation-form button {
+        font-size: 15px;
+        padding: 9px;
     }
 
     .logo-form h1 {
@@ -456,18 +467,18 @@ border-radius: 50%;
     }
 
     .slider-container {
-        height: 400px;
+        height: 380px;
     }
 
     .slider-container img {
-        height: 400px !important;
+        height: 380px !important;
     }
 
     .projects-section {
-        padding: 150px 15px 60px !important;
+        padding: 160px 15px 60px !important;
     }
 
     #product-list img {
-        height: 280px;
+        height: 260px;
     }
 }

@@ -4,7 +4,9 @@ body {
     line-height: 1.6;
     color: white;
     overflow-x: hidden;
+    width: 100%;
 }
+
 .consultation {
     position: absolute;
     top: 400px;
@@ -29,6 +31,11 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 102, 0, 0.4) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
 }
 
 .consultation-form button {
@@ -43,131 +50,64 @@ body {
     transition: 0.3s;
 }
 
-.consultation-form button:hover {
-    background-color: #e65c00;
-}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 32px 40px;
-   height: 135px;
+    height: 135px;
     background-color: #110c2f;
 }
+
 .header .navigation {
     display: flex;
     gap: 30px;
     justify-content: space-between;
     color: #e65c00;
     text-transform: uppercase;
-    font-weight: bold
+    font-weight: bold;
 }
-h1, h2, h3 {
-    font-family: Helvetica, Arial, sans-serif;
+
+.logo-form h1 {
+    color: white;
+    font-weight: bold;
+    margin-left: 190px;
+    font-size: 50px;
+    text-transform: uppercase;
 }
-.image-main{
+
+.image-main {
     width: 100%;
     height: 136px;
     object-fit: cover;
     display: block;
 }
-.logo {width: 120px;
-height: 120px;
-border-radius: 50%;
-}
-.logo-form h1{
-    color: white;
-    font-weight: bold;
-    margin-left: 190px;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-.services {
-    top:600px;
-}
-.services-section h2 {
-    text-align: center;
-    margin-bottom: -20px;
-    font-size: 24px;
-    text-transform: uppercase;
 
-}
 .services-section {
     position: relative;
     width: 100%;
-    top:600px;
+    top: 600px;
     background-color: #110c2f;
     padding-bottom: 40px;
     padding-top: 40px;
 }
-.services-name {
-    font-weight: bold;
-    margin-bottom: 20px;
-    height: 45px;
-    color: #e65c00;
-}
 
-
-.review-card {
-    background-color: #1c143f;
-    border-radius: 12px;
-    border: none;
-    height: 500px;
-    overflow: hidden;
-    padding: 0px;
-    color: #f5f5f5;
-}
-
-.review-card img {
-    width: 100%;
-    height:375px;
-    display: block;
-
-
-}
-
-.services-name {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
 .about-us {
     display: flex !important;
     gap: 50px !important;
     padding: 80px 40px !important;
     background-color: #110c2f !important;
-    margin-top: 600px !important;}
+    margin-top: 600px !important;
+}
 
-.about-us h1{
-    color: white;
-    font-weight: bold;
+.about-us h1, .about-us h2 {
     margin-left: 190px;
-    font-size: 50px;
-    text-transform: uppercase;
 }
-.orange-line {
-    width: 70px;
-    height: 7px;
-    background-color: #ff6600;
-    border-radius: 4px;
-    flex-shrink: 0;
-    box-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
-}
-.about-us h2 {
-    margin-left: 190px;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-.about-slider{ margin-left: -280px;
+
+.about-slider {
+    margin-left: -280px;
     width: 800px !important;
     height: 600px !important;
-
-}
-.slider-block {
-    width: 600px !important;
-    height: 650px !important;
-    flex-shrink: 0 !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
 }
 
 .slider-container {
@@ -177,122 +117,25 @@ border-radius: 50%;
     margin-left: 260px;
     border-radius: 12px;
 }
-.slider-container img{
+
+.slider-container img {
     position: absolute !important;
     height: 500px;
     width: 480px;
-    gap:40px;
     border-radius: 12px;
     object-fit: cover !important;
     opacity: 0 !important;
     transition: opacity 0.9s ease !important;
-
 }
+
 .slider-container img.active {
     opacity: 1 !important;
-}
-
-.page {
-    display: none;
 }
 
 .projects-section {
     background-color: #110c2f;
     padding: 80px 40px 80px;
     color: white;
-    min-height: 500px;
-}
-
-.projects-title {
-    text-align: center;
-    font-size: 42px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 60px;
-    color: #e65c00;
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.product-card {
-    background-color: #1c143f;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-}
-
-.product-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.product-card h3 {
-    font-size: 20px;
-    margin: 16px 0 8px;
-    color: white;
-}
-
-.product-card .price {
-    color: #ff6600;
-    font-weight: bold;
-    font-size: 24px;
-}
-.consultation-form input,
-.consultation-form textarea {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    color: white !important;
-    border: 2px solid rgba(255, 102, 0, 0.4) !important;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-}
-
-.consultation-form input:focus,
-.consultation-form textarea:focus {
-    outline: none;
-    border-color: #ff6600 !important;
-    box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
-}
-
-
-.consultation-form input::placeholder,
-.consultation-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
-}
-.success-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(135deg, #ff6600, #e65c00);
-    color: white;
-    padding: 30px 50px;
-    border-radius: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all 0.6s ease;
-}
-
-.success-message.show {
-    opacity: 1;
-    visibility: visible;
 }
 
 .projects-grid {
@@ -304,202 +147,95 @@ border-radius: 50%;
     margin: 0 auto;
 }
 
-
-#product-list img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 16px 16px 0 0;
-}
-
-
-/* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
+/* ==================== МОБИЛЬНАЯ ВЕРСИЯ (СТРОГО ОТ 1024px и меньше) ==================== */
 @media (max-width: 1024px) {
+    * { box-sizing: border-box; }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
     .header {
         flex-direction: column;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
-        position: relative;
-        touch-action: pan-y;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-    }
-
-    .image-main {
-        height: 800px !important;
-        width: 100% !important;
-        left: 0 !important;
-        overflow: hidden;
-        object-fit: cover;
-        margin-left: 0 !important;
-        position: relative;
-    }
-.image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-    .consultation {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 90%;
-        width: 380px;
-        padding: 30px 20px;
-        background: rgba(28, 20, 63, 0.9);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(255, 102, 0, 0.5);
-        z-index: 10;
-    }
-
-    .consultation h2 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    .logo-form h1 {
-        margin-left: 0;
-        font-size: 36px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .about-us {
-        flex-direction: column;
-        gap: 100px;
-        padding: 220px 0 80px !important;
-        position: relative;
-        z-index: 5;
-    }
-.about-slider {
-    margin-left: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-}
-
-.slider-container {
-    margin-left: 0 !important;
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
-}
-
-.slider-container img {
-    width: 90% !important;
-    left: 5% !important;
-}
-
-    .orange-line {
-        margin: 20px auto;
-    }
-
-    .services-section {
-        top: 0;
-        padding: 60px 0;
-    }
-
-    .review-card {
         height: auto;
-        padding: 80px 20px;
-    }
-
-    .review-card img {
-        height: 300px;
-    }
-
-    .projects-section {
-        padding: 140px 20px 80px !important;
-        margin-top: 0;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
         padding: 20px;
     }
 
-    #product-list img {
-        height: 350px;
-        object-fit: cover;
-    }
-
-    #contactModal .relative {
-        margin: 20px;
-        padding: 30px 20px;
-    }
-
-    #contactModal h2 {
-        font-size: 32px;
-    }
-
-    #contactModal a[href^="tel"] {
-        font-size: 28px;
-    }
-
-    #contactModal .inline-flex {
-        padding: 40px 20px;
-        font-size: 18px;
-        }
-
-
-@media (max-width: 640px) {
-    .header {
-        padding: 15px;
-    }
-    body {
-        overflow-x: hidden;
-    }
-    .image-main {
-        height: 800px !important;
-    }
-
     .logo-form h1 {
-        font-size: 28px;
-    }
-
-    .consultation {
-        width: 90% !important;
-        max-width: 340px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .consultation h2 {
-        font-size: 18px;
-    }
-
-    .review-card img {
-        height: 250px;
-    }
-
-    .about-us {
-        padding: 60px 15px !important;
-        margin-top: 80px !important;
-    }
-    .about-us h1, .about-us h2 {
         margin-left: 0 !important;
-        padding: 0 15px;
+        font-size: 32px;
         text-align: center;
     }
 
-    .projects-section {
-        padding: 80px 15px 60px !important;
+    .image-main {
+        height: 800px !important;
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 
-    #product-list img {
-        height: 280px;
+    .consultation {
+        margin-left: 0 !important;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .about-us {
+        flex-direction: column !important;
+        margin-top: 80px !important;
+        padding: 60px 15px !important;
+        gap: 40px !important;
+    }
+
+    .about-us h1, .about-us h2 {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    .about-slider {
+        margin-left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .slider-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
     }
 
     .slider-container img {
-        height: 300px !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 350px !important;
+        left: 0 !important;
+        opacity: 1 !important;
+        display: none;
     }
+
+    .slider-container img.active {
+        display: block;
+    }
+
+    .services-section {
+        top: 0 !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 640px) {
+    .consultation {
+        width: 95%;
+        padding: 20px;
+    }
+    .consultation h2 { font-size: 18px; }
 }

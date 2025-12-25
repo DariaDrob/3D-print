@@ -334,12 +334,13 @@ h1, h2, h3 {
     }
 
     .consultation {
-        position: static;
-        max-width: 90%;
-        margin: 40px auto;
-        padding: 30px 20px;
+        position: relative;
+        top: 0;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 400px;
+        background: #1c143f !important;
     }
-
     .consultation h2 {
         font-size: 20px;
     }
@@ -351,10 +352,10 @@ h1, h2, h3 {
     }
 
     .about-us {
-        flex-direction: column;
-        gap: 40px;
-        padding: 60px 20px !important;
+        flex-direction: column !important;
         margin-top: 0 !important;
+        padding: 40px 20px !important;
+        gap: 30px;
     }
 
     .about-us h1, .about-us h2 {
@@ -372,9 +373,9 @@ h1, h2, h3 {
     }
 
     .about-slider {
-        margin-left: 0;
+        margin-left: 0 !important;
         width: 100% !important;
-        height: auto !important;
+        height: 350px !important;
     }
 
     .slider-container {
@@ -388,8 +389,8 @@ h1, h2, h3 {
     }
 
     .services-section {
-        top: 0;
-        padding: 60px 20px;
+        top: 0 !important;
+        padding: 40px 0;
     }
 
     .review-card {
@@ -408,7 +409,7 @@ h1, h2, h3 {
         font-size: 32px;
     }
 
-    /* Галерея проектов — одна колонка на мобильных */
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -419,7 +420,7 @@ h1, h2, h3 {
         height: 300px;
     }
 
-    /* Модалка контактов на мобильных */
+
     #contactModal .relative {
         margin: 20px;
         padding: 30px 20px;
@@ -490,7 +491,7 @@ h1, h2, h3 {
             .about-slider {
                 margin-left: 0;
                 width: 100% !important;
-                height: auto !important;
+                height: 280px !important;
             }
 
             .slider-container {

@@ -4,9 +4,7 @@ body {
     line-height: 1.6;
     color: white;
     overflow-x: hidden;
-    width: 100%;
 }
-
 .consultation {
     position: absolute;
     top: 400px;
@@ -31,11 +29,6 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    color: white !important;
-    border: 2px solid rgba(255, 102, 0, 0.4) !important;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
 }
 
 .consultation-form button {
@@ -50,6 +43,9 @@ body {
     transition: 0.3s;
 }
 
+.consultation-form button:hover {
+    background-color: #e65c00;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -58,56 +54,120 @@ body {
     height: 135px;
     background-color: #110c2f;
 }
-
 .header .navigation {
     display: flex;
     gap: 30px;
     justify-content: space-between;
     color: #e65c00;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bold
 }
-
-.logo-form h1 {
+h1, h2, h3 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.image-main{
+    width: 100%;
+    height: 136px;
+    object-fit: cover;
+    display: block;
+}
+.logo {width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.logo-form h1{
     color: white;
     font-weight: bold;
     margin-left: 190px;
     font-size: 50px;
     text-transform: uppercase;
 }
-
-.image-main {
-    width: 100%;
-    height: 136px;
-    object-fit: cover;
-    display: block;
+.services {
+    top:600px;
 }
+.services-section h2 {
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 24px;
+    text-transform: uppercase;
 
+}
 .services-section {
     position: relative;
     width: 100%;
-    top: 600px;
+    top:600px;
     background-color: #110c2f;
     padding-bottom: 40px;
     padding-top: 40px;
 }
+.services-name {
+    font-weight: bold;
+    margin-bottom: 20px;
+    height: 45px;
+    color: #e65c00;
+}
 
+
+.review-card {
+    background-color: #1c143f;
+    border-radius: 12px;
+    border: none;
+    height: 500px;
+    overflow: hidden;
+    padding: 0px;
+    color: #f5f5f5;
+}
+
+.review-card img {
+    width: 100%;
+    height:375px;
+    display: block;
+
+
+}
+
+.services-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 .about-us {
     display: flex !important;
     gap: 50px !important;
     padding: 80px 40px !important;
     background-color: #110c2f !important;
-    margin-top: 600px !important;
-}
+    margin-top: 600px !important;}
 
-.about-us h1, .about-us h2 {
+.about-us h1{
+    color: white;
+    font-weight: bold;
     margin-left: 190px;
+    font-size: 50px;
+    text-transform: uppercase;
 }
-
-.about-slider {
-    margin-left: -280px;
+.orange-line {
+    width: 70px;
+    height: 7px;
+    background-color: #ff6600;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
+}
+.about-us h2 {
+    margin-left: 190px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.about-slider{ margin-left: -280px;
     width: 800px !important;
     height: 600px !important;
+
+}
+.slider-block {
+    width: 600px !important;
+    height: 650px !important;
+    flex-shrink: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
 }
 
 .slider-container {
@@ -117,25 +177,123 @@ body {
     margin-left: 260px;
     border-radius: 12px;
 }
-
-.slider-container img {
+.slider-container img{
     position: absolute !important;
     height: 500px;
     width: 480px;
+    gap:40px;
     border-radius: 12px;
     object-fit: cover !important;
     opacity: 0 !important;
     transition: opacity 0.9s ease !important;
-}
 
+}
 .slider-container img.active {
     opacity: 1 !important;
+}
+/*ТЕСТ*/
+
+.page {
+    display: none; /* важно для твоей функции showPage */
 }
 
 .projects-section {
     background-color: #110c2f;
     padding: 80px 40px 80px;
     color: white;
+    min-height: 500px;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: #e65c00;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #1c143f;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+    color: white;
+}
+
+.product-card .price {
+    color: #ff6600;
+    font-weight: bold;
+    font-size: 24px;
+}
+.consultation-form input,
+.consultation-form textarea {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 102, 0, 0.4) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.consultation-form input:focus,
+.consultation-form textarea:focus {
+    outline: none;
+    border-color: #ff6600 !important;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Плейсхолдеры — светло-серые, чтобы не сливались */
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #ff6600, #e65c00);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;           /* добавили это */
+    pointer-events: none;
+    transition: all 0.6s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;           /* и это */
 }
 
 .projects-grid {
@@ -147,95 +305,328 @@ body {
     margin: 0 auto;
 }
 
-/* ==================== МОБИЛЬНАЯ ВЕРСИЯ (СТРОГО ОТ 1024px и меньше) ==================== */
+/* Единая высота фото в карточках */
+#product-list img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
 @media (max-width: 1024px) {
-    * { box-sizing: border-box; }
-
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
-
     .header {
         flex-direction: column;
         height: auto;
         padding: 20px;
+        gap: 20px;
     }
 
-    .logo-form h1 {
-        margin-left: 0 !important;
-        font-size: 32px;
+    .header .navigation {
+        flex-direction: column;
+        gap: 15px;
         text-align: center;
     }
 
-    .image-main {
-        height: 800px !important;
-        margin-left: 0 !important;
-        width: 100% !important;
+    .logo {
+        width: 100px;
+        height: 100px;
     }
 
     .consultation {
-        margin-left: 0 !important;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 380px;
+        position: static;
+        max-width: 90%;
+        margin: 40px auto;
+        padding: 30px 20px;
     }
 
-    .about-us {
-        flex-direction: column !important;
-        margin-top: 80px !important;
-        padding: 60px 15px !important;
-        gap: 40px !important;
+    .consultation h2 {
+        font-size: 20px;
     }
 
-    .about-us h1, .about-us h2 {
-        margin-left: 0 !important;
+    .logo-form h1 {
+        margin-left: 0;
+        font-size: 36px;
         text-align: center;
     }
 
+    .about-us {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 20px !important;
+        margin-top: 0 !important;
+    }
+
+    .about-us h1, .about-us h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .about-us h2 {
+        font-size: 20px;
+    }
+
+    .orange-line {
+        margin: 0 auto;
+    }
+
     .about-slider {
-        margin-left: 0 !important;
+        margin-left: 0;
         width: 100% !important;
         height: auto !important;
     }
 
     .slider-container {
-        margin-left: 0 !important;
-        width: 100% !important;
-        display: flex;
-        justify-content: center;
+        margin-left: 0;
+        height: 400px;
     }
 
     .slider-container img {
-        position: relative !important;
         width: 100% !important;
-        height: 350px !important;
-        left: 0 !important;
-        opacity: 1 !important;
-        display: none;
-    }
-
-    .slider-container img.active {
-        display: block;
+        height: 400px !important;
     }
 
     .services-section {
-        top: 0 !important;
+        top: 0;
+        padding: 60px 20px;
     }
 
+    .review-card {
+        height: auto;
+    }
+
+    .review-card img {
+        height: 300px;
+    }
+
+    .projects-section {
+        padding: 60px 20px;
+    }
+
+    .projects-title {
+        font-size: 32px;
+    }
+
+    /* Галерея проектов — одна колонка на мобильных */
     .projects-grid {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-/* Маленькие телефоны */
-@media (max-width: 640px) {
-    .consultation {
-        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 30px;
         padding: 20px;
     }
-    .consultation h2 { font-size: 18px; }
-}
+
+    #product-list img {
+        height: 300px;
+    }
+
+    /* Модалка контактов на мобильных */
+    #contactModal .relative {
+        margin: 20px;
+        padding: 30px 20px;
+        /* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
+
+        @media (max-width: 1024px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .header .navigation {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+
+            .image-main {
+                height: 600px !important;
+            }
+
+            .consultation {
+                position: static;
+                max-width: 90%;
+                margin: 40px auto;
+                padding: 30px 20px;
+            }
+
+            .consultation h2 {
+                font-size: 20px;
+            }
+
+            .logo-form h1 {
+                margin-left: 0;
+                font-size: 36px;
+                text-align: center;
+            }
+
+            .about-us {
+                flex-direction: column;
+                gap: 40px;
+                padding: 80px 20px !important;
+                margin-top: 100px !important;
+            }
+
+            .about-us h1, .about-us h2 {
+                margin-left: 0;
+                text-align: center;
+                font-size: 36px;
+            }
+
+            .about-us h2 {
+                font-size: 20px;
+            }
+
+            .orange-line {
+                margin: 0 auto;
+            }
+
+            .about-slider {
+                margin-left: 0;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .slider-container {
+                margin-left: 0;
+                height: 400px;
+            }
+
+            .slider-container img {
+                width: 100% !important;
+                height: 400px !important;
+            }
+
+            .services-section {
+                top: 0;
+                padding: 60px 20px;
+            }
+
+            .review-card {
+                height: auto;
+            }
+
+            .review-card img {
+                height: 300px;
+            }
+
+            .projects-section {
+                padding: 100px 20px 60px !important;
+            }
+
+            .projects-title {
+                font-size: 32px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px;
+            }
+
+            #product-list img {
+                height: 300px;
+            }
+
+
+            #contactModal .relative {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+
+            #contactModal h2 {
+                font-size: 32px;
+            }
+
+            #contactModal a[href^="tel"] {
+                font-size: 28px;
+            }
+
+            #contactModal .inline-flex {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+
+        #contactModal h2 {
+            font-size: 32px;
+        }
+        @media (max-width: 640px) {
+            .header {
+                padding: 15px;
+            }
+
+            #contactModal a[href^="tel"] {
+                font-size: 28px;
+            }
+            .logo-form h1 {
+                font-size: 28px;
+            }
+
+            #contactModal .inline-flex {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+        .consultation h2 {
+            font-size: 18px;
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                padding: 15px;
+            }
+            .projects-title {
+                font-size: 28px;
+            }
+
+            .logo-form h1 {
+                font-size: 28px;
+            }
+            .review-card img {
+                height: 250px;
+            }
+
+            .consultation h2 {
+                font-size: 18px;
+            }
+            #product-list img {
+                height: 250px;
+            }
+
+            .projects-title {
+                font-size: 28px;
+            }
+            .slider-container img {
+                height: 300px !important;
+            }
+
+            .review-card img {
+                height: 250px;
+            }
+            .image-main {
+                height: 500px !important;
+            }
+
+            #product-list img {
+                height: 250px;
+            }
+            .about-us {
+                padding: 60px 15px !important;
+                margin-top: 80px !important;
+            }
+
+            .slider-container img {
+                height: 300px !important;
+            }
+        }
+        .projects-section {
+            padding: 80px 15px 60px !important;
+        }
+    }}

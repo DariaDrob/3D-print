@@ -419,7 +419,12 @@ h1, h2, h3 {
     #product-list img {
         height: 300px;
     }
-
+    .footer-bottom {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
 
     #contactModal .relative {
         margin: 20px;
